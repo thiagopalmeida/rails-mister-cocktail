@@ -10,17 +10,21 @@
   <div class="container">
     <div class="">
       <div class="row row-cols-4">
-        <% @cocktails.each do |cocktails| %>
-        <%= link_to cocktails do %>
+        <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail do %>
 
         <div class="card-drink">
           <div class="col">
             <div class="card-inside d-flex">
               <div class="photo-card">
-                <img class="image-drink p-2 bd-highlight" src="https://images.pexels.com/photos/1189257/pexels-photo-1189257.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+                <% if cocktail.photo.attached? %>
+                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+                    Cool article
+                  </div>
+                <% end %>
               </div>
             </div>
-            <p class="card-text"><%= cocktails.name %></p>
+            <p class="card-text"><%= cocktail.name %></p>
           </div>
         </div>
 
@@ -29,8 +33,7 @@
       </div>
     </div>
   </div>
-  <%= cl_image_tag("testemuitoloko"),
-      width: 400, height: 300, crop: :fill) %>
+  <%= cl_image_tag("testemuitoloko", width: 400, height: 300, crop: :fill) %>
 </div>
 
 <!-- <div class="container">
