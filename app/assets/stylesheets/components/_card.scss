@@ -1,0 +1,25 @@
+.card-drink {
+  margin: 12px;
+  padding: 8px;
+  background-color: rgba(245, 245, 245, 0.9);
+  height: 240px;
+  width: 240px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+.card-inside {
+  height: 160px;
+  width: 220px;
+}
+
+.image-drink {
+  height: 160px;
+  width: 220px;
+  margin: -4px -12px;
+}
+
+.card-text {
+  text-align: center;
+  padding-top: 12px;
+}
