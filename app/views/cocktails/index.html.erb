@@ -1,0 +1,29 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="d-flex flex-row justify-content-center">
+    <div class="col-md-4 d-inline-flex align-items-center div-logo">
+      <span id="logo" class="ml-auto"><i class="fas fa-cocktail"></i></span>
+    </div>
+    <div class="col-md-4 d-inline-flex align-items-center">
+      <h1>Cocktails</h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <% @cocktails.each do |cocktails| %>
+    <%= link_to cocktails do %>
+    <div class="col col-lg-6">
+      <div class="card">
+       <p class="card-text"><%= cocktails.name %></p>
+      </div>
+    <% end %>
+    <% end %>
+    </div>
+  </div>
+  <div>
+    <%= link_to '+ New Cocktails', new_cocktail_path %>
+  </div>
+</div>
+
+
+

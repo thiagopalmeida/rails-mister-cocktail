@@ -1,0 +1,23 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+}
+
+.banner h1 {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 40px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+#logo {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: right;
+}
+
+.div-logo {
+  padding: 0;
+}
