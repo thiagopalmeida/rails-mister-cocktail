@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/4279099/pexels-photo-4279099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/4279099/pexels-photo-4279099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) ;">
   <div>
     <div class="d-flex justify-content-center">
       <h1>Cocktails</h1>
@@ -9,38 +9,28 @@
   <%= link_to '+ New Cocktails', new_cocktail_path, class:"btn btn-primary", id:"add-button"%>
   <div class="container">
     <div class="">
-      <div class="row row-cols-4">
+      <div class="row">
         <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail do %>
 
-        <div class="card-drink">
-          <div class="col">
-            <div class="card-inside d-flex">
-              <div class="photo-card">
-                <% if cocktail.photo.attached? %>
-                  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
-                    Cool article
-                  </div>
-                <% end %>
-              </div>
+        <div class="col-md-4">
+          <div class="card-drink">
+            <% if cocktail.photo.attached? %>
+              <div class="card-inside d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key %>')">
+                <div class="photo-card">
+                </div>
+            <% else %>
+              <div class="card-inside d-flex" style="background-color: black">
+                <div class="photo-card">
+                </div>
+            <% end %>
             </div>
             <p class="card-text"><%= cocktail.name %></p>
           </div>
         </div>
-
         <% end %>
         <% end %>
       </div>
     </div>
   </div>
-  <%= cl_image_tag("testemuitoloko", width: 400, height: 300, crop: :fill) %>
 </div>
-
-<!-- <div class="container">
-  <div class="row row-cols-3">
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-    <div class="col">Column</div>
-  </div>
-</div> -->
