@@ -16,7 +16,7 @@
         <div class="col-md-4">
           <div class="card-drink">
             <% if cocktail.photo.attached? %>
-              <div class="card-inside d-flex" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+              <div class="card-inside d-flex" style="background-image: url(<%= cl_image_path cocktail.photo.key %>)">
                 <div class="photo-card">
                 </div>
             <% else %>
