@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/4279099/pexels-photo-4279099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) ;">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/4279099/pexels-photo-4279099.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
   <div>
     <div class="d-flex justify-content-center">
       <h1>Cocktails</h1>
@@ -16,7 +16,7 @@
         <div class="col-md-4">
           <div class="card-drink">
             <% if cocktail.photo.attached? %>
-              <div class="card-inside d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key %>')">
+              <div class="card-inside d-flex" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
                 <div class="photo-card">
                 </div>
             <% else %>
